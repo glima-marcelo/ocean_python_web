@@ -26,11 +26,3 @@ def exibir_entradas():
     for titulo, texto in cur.fetchall():
         entradas.append({'titulo': titulo, 'texto': texto})
     return str(entradas)
-
-@app.route('/')
-def index():
-    return "Olá pessoal! Novo teste <a href='/pudim'></a>"
-
-@app.route('/pudim')
-def pudim():
-    return "agora pudim"
